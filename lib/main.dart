@@ -285,7 +285,7 @@ class UserDetail extends StatelessWidget {
           const SizedBox(
               width: 350,
               height: 50,
-              child: Text('User Name',
+              child: Text('GamerGuy1',
                   textScaler: TextScaler.linear(2),
                   textAlign: TextAlign.center)),
           _getPFP(0),
