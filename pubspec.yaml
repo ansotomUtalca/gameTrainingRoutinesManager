@@ -41,12 +41,17 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_native_splash: ^2.3.11
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.2
+
+flutter_native_splash: 
+  color: "#ff00cc"
+  image: lib/Images/esport.png
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -68,6 +73,14 @@ flutter:
     - lib/Images/melee.svg
     - lib/Images/Apex-Legends.svg
     - lib/Images/usuario.svg
+    - lib/Images/plus.svg
+    - lib/Images/esport.png
+    - lib/Images/HaloPFP.png
+    - lib/Images/foxPFP.png
+    - lib/Images/UserPFP.png
+    - lib/Images/meleeIcon.png
+    - lib/Images/ApexIcon.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
