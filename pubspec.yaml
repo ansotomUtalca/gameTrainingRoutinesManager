@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.10+1
+  flutter_native_splash: ^2.3.11
 
 dev_dependencies:
   flutter_test:
@@ -50,8 +51,13 @@ dev_dependencies:
   flutter_lints: ^3.0.2
 
 flutter_native_splash: 
-  color: "#ff00cc"
-  image: lib/Images/esport.png
+    color: "#220035"
+    #image: lib/Images/esport.png
+    
+    android_12:
+      color: "#220035"
+      image: lib/Images/esport.png
+      
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -69,18 +75,23 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
+  
+
   assets:
     - lib/Images/melee.svg
     - lib/Images/Apex-Legends.svg
+    - lib/Images/mahjongsoul.svg
+    - lib/Images/marvelsnap.svg
     - lib/Images/usuario.svg
     - lib/Images/plus.svg
+    - lib/Images/check.svg
+    - lib/Images/refresh.svg
     - lib/Images/esport.png
     - lib/Images/HaloPFP.png
     - lib/Images/foxPFP.png
     - lib/Images/UserPFP.png
     - lib/Images/meleeIcon.png
     - lib/Images/ApexIcon.png
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

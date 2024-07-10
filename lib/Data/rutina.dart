@@ -1,13 +1,11 @@
 import 'package:game_routine_manager/Data/objetivo.dart';
 
 class Rutina {
-  String description = '';
-  DateTime schedule = DateTime(
-      DateTime.now().year, DateTime.now().month, DateTime.now().day, 13, 30, 0);
-  bool hasSchedule = true;
-  bool complete = false;
-  bool isTimed = false;
-  List objetivos = [Objetivo('Placeholder')];
+  String _description = '';
+  bool _complete = false;
+  bool _active = false;
+  List<Objetivo> objetivos = [];
+  List<String> historial = [];
 
   void resetRoutine() {
     for (Objetivo o in objetivos) {
@@ -15,8 +13,12 @@ class Rutina {
     }
   }
 
-  void addObjective(String text) {
-    objetivos.add(Objetivo(text));
+  Objetivo getObjective(int index) {
+    return objetivos[index];
+  }
+
+  void addObjective(String text, int count) {
+    objetivos.add(Objetivo(text, count));
   }
 
   void editObjective(int index, String text) {
@@ -28,7 +30,46 @@ class Rutina {
     objetivos.remove(index);
   }
 
+  String showName() {
+    return _description;
+  }
+
+  String showObjective(int index) {
+    return objetivos[index].showName();
+  }
+
+  int objectiveCount() {
+    return objetivos.length;
+  }
+
+  int historyCount() {
+    return historial.length;
+  }
+
+  bool isActive() {
+    return _active;
+  }
+
+  void activate(bool active) {
+    _active = active;
+  }
+
+  void addToHistory(String hecho, String momento) {
+    historial.add(hecho);
+    historial.add(momento);
+  }
+
+  void checkObjectiveCompletion() {
+    for (Objetivo o in objetivos) {
+      if (o.isComplete() == false) {
+        return;
+      }
+    }
+    _complete = true;
+    addToHistory(_description, 'Today');
+  }
+
   Rutina(String description) {
-    description = description;
+    _description = description;
   }
 }
